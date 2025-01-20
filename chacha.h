@@ -3,15 +3,10 @@
 
 #include <stdint.h>
 
-const uint32_t KEY_SIZE = 32;
-const uint32_t NONCE_SIZE = 12;
-const uint32_t COUNTER_SIZE = 4;
+#define KEY_SIZE 32
+#define NONCE_SIZE 12
+#define COUNTER_SIZE 4
 
-const uint32_t INITIALIZATION_CONSTANTS[4] = {
-    0x61707865, // "expa" LE
-    0x3320646e, // "nd 3" LE
-    0x79622d32, // "2-by" LE
-    0x6b206574, // "te k" LE
-};
+extern const uint32_t INITIALIZATION_CONSTANTS[4];
 
 #endif
