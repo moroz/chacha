@@ -17,4 +17,8 @@ typedef struct ChaChaState {
 void initialize_state(ChaChaState *cc, const uint8_t *key, const uint8_t *nonce,
                       uint32_t counter);
 
+void quarter_round(uint32_t *a, uint32_t *b, uint32_t *c, uint32_t *d);
+void chacha20_round(ChaChaState *cc);
+void chacha20_block(ChaChaState *cc);
+
 #endif

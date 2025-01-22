@@ -26,6 +26,8 @@ void test_initialize_block(void) {
   for (int i = 0; i < 16; i++) {
     CU_ASSERT(state.state[i] == expected_state[i]);
   }
+
+  chacha20_block(&state);
 }
 
 int main() {
